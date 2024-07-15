@@ -22,8 +22,7 @@ const DisplayName = ()=>{
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevent default form submission
     
-        
-      };
+    };
 
     return(
         <div>
@@ -34,7 +33,7 @@ const DisplayName = ()=>{
                 <h6>First Name : <input type="text" onChange={handleFirstName} required="required"></input></h6> 
                 <h6>Last Name :  <input type="text" onChange={handleLastName} required="required"></input></h6>
 
-                <button onClick={show}>Submit</button>
+                <button type='submit' onClick={show}>Submit</button>
 
                 
             </form>

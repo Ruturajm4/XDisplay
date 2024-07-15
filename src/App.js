@@ -1,9 +1,10 @@
 import DisplayName from "./DisplayName";
+import MyForm from "./form";
 
 function App() {
   return (
     <div>
-      <DisplayName />
+      <MyForm />
     </div>
   );
 }
