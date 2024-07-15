@@ -4,7 +4,8 @@ import MyForm from "./form";
 function App() {
   return (
     <div>
-      <MyForm />
+      {/* <MyForm /> */}
+      <DisplayName />
     </div>
   );
 }
