@@ -19,17 +19,27 @@ const DisplayName = ()=>{
         setDisplay((prev)=>!prev)
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Prevent default form submission
+    
+        
+      };
+
     return(
         <div>
-            <h3>Full Name Display</h3>
+            <div>
+            <form onSubmit={handleSubmit}>
+                <h3>Full Name Display</h3>
 
-            <h6>First Name : <input onChange={handleFirstName}></input></h6> 
-            <h6>Last Name :  <input onChange={handleLastName}></input></h6>
+                <h6>First Name : <input type="text" onChange={handleFirstName} required="required"></input></h6> 
+                <h6>Last Name :  <input type="text" onChange={handleLastName} required="required"></input></h6>
 
-            <button onClick={show}>Submit</button>
+                <button onClick={show}>Submit</button>
 
-            <p>{display && `${firstName} ${lastName}`}</p>
-
+                
+            </form>
+            </div>
+            <p>Full Name : {display && `${firstName} ${lastName}`}</p>
         </div>
     )
 }
