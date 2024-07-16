@@ -23,24 +23,28 @@ const DisplayName = () => {
             <div>
                 <form onSubmit={handleSubmit}>
                     <h3>Full Name Display</h3>
-                    <h6>
+                    <label htmlFor='FirstName'>
                         First Name:{' '}
+                    </label>
                         <input
                             type="text"
                             onChange={handleFirstName}
                             required="required"
                             aria-label="First Name"
+                            id='FirstName'
                         />
-                    </h6>
-                    <h6>
+                    
+                    <label htmlFor="LastName">
                         Last Name:{' '}
+                    </label>
                         <input
                             type="text"
                             onChange={handleLastName}
                             required="required"
                             aria-label="Last Name"
+                            id="LastName"
                         />
-                    </h6>
+                  
                     <button type="submit">Submit</button>
                 </form>
             </div>
