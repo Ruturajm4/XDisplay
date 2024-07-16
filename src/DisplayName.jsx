@@ -1,58 +1,55 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const DisplayName = () => {
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
-    const [display, setDisplay] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [secondName, setSecondName] = useState('');
+  const [clicked, setClicked] = useState(false);
 
-    const handleFirstName = (e) => {
-        setFirstName(e.target.value);
-    };
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
 
-    const handleLastName = (e) => {
-        setLastName(e.target.value);
-    };
+  const handleSecondNameChange = (e) => {
+    setSecondName(e.target.value);
+  };
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent default form submission
-        setDisplay(true); // Set display to true on form submission
-    };
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    setClicked(true); 
+  };
 
-    return (
+  return (
+    <div>
+      <h1>Full Name Display</h1>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="Firstname">First Name:</label>
+        <input
+          type="text"
+          value={firstName}
+          onChange={handleFirstNameChange}
+          id="Firstname"
+          required 
+        />
+        <br />
+        <label htmlFor="Lastname">Last Name:</label>
+        <input
+          type="text"
+          value={secondName}
+          onChange={handleSecondNameChange}
+          id="Lastname"
+          required 
+        />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+      
+      {clicked ?(
         <div>
-            
-                <form onSubmit={handleSubmit}>
-                    <h3>Full Name Display</h3>
-                    <label htmlFor='FirstName'>
-                        First Name:{' '}
-                    </label>
-                        <input
-                            type="text"
-                            value={firstName}
-                            onChange={handleFirstName}
-                            required="required"
-                            aria-label="First Name"
-                            id='FirstName'
-                        />
-                    <br />
-                    <label htmlFor="LastName">
-                        Last Name:{' '}
-                    </label>
-                        <input
-                            type="text"
-                            value={lastName}
-                            onChange={handleLastName}
-                            required="required"
-                            aria-label="Last Name"
-                            id="LastName"
-                        />
-                  <br />
-                    <button type="submit">Submit</button>
-                </form>
-            
-            <p>{display && `Full Name: ${firstName} ${lastName}`}</p>
+          <p> <strong>Full Name:</strong> {firstName} {secondName}</p>
         </div>
-    );
+      ):""}
+    </div>
+  );
 };
 
 export default DisplayName;
