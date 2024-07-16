@@ -28,6 +28,7 @@ const DisplayName = () => {
                     </label>
                         <input
                             type="text"
+                            value={firstName}
                             onChange={handleFirstName}
                             required="required"
                             aria-label="First Name"
@@ -39,6 +40,7 @@ const DisplayName = () => {
                     </label>
                         <input
                             type="text"
+                            value={lastName}
                             onChange={handleLastName}
                             required="required"
                             aria-label="Last Name"
