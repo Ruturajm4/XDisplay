@@ -20,7 +20,7 @@ const DisplayName = () => {
 
     return (
         <div>
-            <div>
+            
                 <form onSubmit={handleSubmit}>
                     <h3>Full Name Display</h3>
                     <label htmlFor='FirstName'>
@@ -49,7 +49,7 @@ const DisplayName = () => {
                   <br />
                     <button type="submit">Submit</button>
                 </form>
-            </div>
+            
             <p>{display && `Full Name: ${firstName} ${lastName}`}</p>
         </div>
     );
