@@ -34,7 +34,7 @@ const DisplayName = () => {
                             aria-label="First Name"
                             id='FirstName'
                         />
-                    
+                    <br />
                     <label htmlFor="LastName">
                         Last Name:{' '}
                     </label>
@@ -46,11 +46,11 @@ const DisplayName = () => {
                             aria-label="Last Name"
                             id="LastName"
                         />
-                  
+                  <br />
                     <button type="submit">Submit</button>
                 </form>
             </div>
-            <p>Full Name: {display && `${firstName} ${lastName}`}</p>
+            <p>{display && `Full Name: ${firstName} ${lastName}`}</p>
         </div>
     );
 };
