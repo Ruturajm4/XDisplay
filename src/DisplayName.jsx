@@ -15,12 +15,13 @@ const DisplayName = ()=>{
         setLastName(e.target.value)
     }
 
-    const show=()=>{
-        setDisplay((prev)=>!prev)
-    }
+    // const show=()=>{
+        
+    // }
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevent default form submission
+        setDisplay((prev)=>!prev)
     
     };
 
@@ -33,7 +34,7 @@ const DisplayName = ()=>{
                 <h6>First Name : <input type="text" onChange={handleFirstName} required="required"></input></h6> 
                 <h6>Last Name :  <input type="text" onChange={handleLastName} required="required"></input></h6>
 
-                <button type='submit' onClick={show}>Submit</button>
+                <button type='submit'>Submit</button>
 
                 
             </form>
